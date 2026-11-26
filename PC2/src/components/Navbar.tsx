@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-
+import { useAuth } from '../AuthContext';
 
 export default function Navbar() {
   const { isAuthenticated, user, logout } = useAuth();
@@ -23,7 +23,7 @@ export default function Navbar() {
           to="/flights"
           className="text-2xl font-black tracking-tight no-underline"
         >
-          Fly Away Travel
+          Aula Soporte
         </Link>
 
         <nav className="flex items-center gap-7 flex-wrap">

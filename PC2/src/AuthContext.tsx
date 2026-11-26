@@ -1,4 +1,4 @@
-import React, { createContext, use, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import { apiService } from "./api";
 import type { IUser } from "./types";
 
@@ -60,4 +60,13 @@ export const AuthProvider:React.FC<{children:React.ReactNode}>=({children})=>{
         </AuthContext.Provider>
     );
 };
+
+export const useAuth=():AuthContextType=>{
+    const context=useContext(AuthContext);
+    if (!context){
+        throw new Error('useAuth solo dentro de un provider')
+    }
+    return context;
+};
+
 
