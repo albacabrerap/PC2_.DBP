@@ -1,0 +1,11 @@
+{
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "always",
+        "source.sortImports": "always",
+        "source.addMissingImports.ts": "always",
+        "source.fixAll.ts": "always",
+    }
+}
